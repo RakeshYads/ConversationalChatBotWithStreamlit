@@ -4,7 +4,7 @@
 This project demonstrates how to build a simple chatbot using Rasa, integrate it with Streamlit for a user-friendly interface, and deploy it using Railway, a platform for deploying applications.
 
 ### Project Structure
-'''bash
+```bash
 .
 ├── actions # Rasa custom actions (Python code)
 │ └── ...
@@ -13,20 +13,15 @@ This project demonstrates how to build a simple chatbot using Rasa, integrate it
 ├── models # Trained Rasa models
 │ └── ...
 ├── streamlit_app # Streamlit application files
-│ ├── assets # CSS, images, etc.
-│ ├── components # Reusable Streamlit components
-│ ├── pages # Different pages/screens of the Streamlit app
-│ ├── config.py # Configuration for Streamlit app
-│ └── main.py # Main script to run Streamlit app
-├── tests # Unit tests, if any
-│ └── ...
+|
+| └── main.py # Main script to run Streamlit app
 ├── .gitignore # Git ignore file
 ├── Dockerfile # Dockerfile for Rasa action server
 ├── README.md # README file (you're reading this)
 ├── requirements.txt # Python dependencies
 └── railway.yml # Railway configuration file
 
-'''
+```
 
 ### Prerequisites
 - Python 3.7+
@@ -38,83 +33,79 @@ This project demonstrates how to build a simple chatbot using Rasa, integrate it
    ```bash
    git clone <repository-url>
    cd <repository-name>
+   ```
+2. **Install dependencies:**
 
-    Install dependencies:
+    ```bash
 
-    bash
+     pip install -r requirements.txt
+     ```
+3. **Train Rasa model:**
 
-pip install -r requirements.txt
+   ```bash
 
-Train Rasa model:
+    rasa train
+    ```
+4. **Run Rasa action server:**
 
-bash
+   ```bash
 
-rasa train
+   docker build -t rasa-action-server .
+   docker run -p 5055:5055 rasa-action-server
+   ```
+5. **Run Streamlit app locally:**
 
-Run Rasa action server:
-
-bash
-
-docker build -t rasa-action-server .
-docker run -p 5055:5055 rasa-action-server
-
-Run Streamlit app locally:
-
-bash
+   ```bash
 
     streamlit run streamlit_app/main.py
+    ```
+###Deployment with Railway:**
+    
+1. **Sign in to Railway using CLI:**
 
-Deployment with Railway
+    ```bash
 
-    Sign in to Railway using CLI:
+     railway login
+     ```
 
-    bash
+2. **Initialize Railway project:**
 
-railway login
+   ```bash
 
-Initialize Railway project:
+    railway init
+    ```
 
-bash
+3. **Configure Railway deployment:**
+   Modify railway.yml to include deployment configurations for Rasa and Streamlit services.
 
-railway init
+4. **Deploy to Railway:**
 
-Configure Railway deployment:
-Modify railway.yml to include deployment configurations for your Rasa and Streamlit services.
-
-Deploy to Railway:
-
-bash
+    ```bash
 
     railway up
+    ```
+    
+5.  **Access the deployed application:**
+    Once deployed, Railway will provide a URL to access deployed Rasa chatbot integrated with Streamlit.
+###Usage
 
-    Access your deployed application:
-    Once deployed, Railway will provide you with a URL to access your deployed Rasa chatbot integrated with Streamlit.
+   - Open the Streamlit app URL provided by Railway.
+   - Interact with the chatbot interface. Start by typing a message to initiate the conversation.
 
-Usage
+###Customization
 
-    Open the Streamlit app URL provided by Railway.
-    Interact with the chatbot interface. Start by typing a message to initiate the conversation.
+   - Rasa: Customize intents, entities, and responses in the data folder.
+   - Streamlit: Modify the UI components, styling, and logic in the streamlit_app folder.
 
-Customization
-
-    Rasa: Customize intents, entities, and responses in the data folder.
-    Streamlit: Modify the UI components, styling, and logic in the streamlit_app folder.
-
-Contributing
-
-Contributions are welcome! If you have suggestions or improvements, please create a pull request or open an issue.
-License
-
-This project is licensed under the MIT License.
-Acknowledgements
+###Acknowledgements
 
     This project uses Rasa for chatbot development.
     Streamlit is used for creating the user interface.
     Railway is used for deployment.
 
-Contact
+###Contact
 
-For questions or support, please contact Rakesh Yadav.
+For questions or support, please contact [Rakesh Yadav](https://www.linkedin.com/in/rakesh-yadav-556724118/).
 
 
 
