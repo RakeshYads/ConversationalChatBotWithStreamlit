@@ -1,0 +1,51 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_ask_username
+  - intent: user_name
+    entities:
+    - user: Rakesh
+  - slot_was_set:
+    - user: Rakesh
+  - action: action_greet
+  - intent: mood_great
+  - action: utter_happy
+  - action: action_end_chat
+#  - action: utter_end_chat
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_ask_username
+  - intent: user_name
+    entities:
+      - user: Rakesh
+  - slot_was_set:
+      - user: Rakesh
+  - action: action_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - action: action_end_chat
+#  - action: utter_end_chat
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_ask_username
+  - intent: user_name
+    entities:
+      - user: Rakesh
+  - slot_was_set:
+      - user: Rakesh
+  - action: action_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: action_end_chat
