@@ -1,0 +1,23 @@
+version: "3.1"
+
+rules:
+
+#- rule: Say `hello` when the user starts a conversation with intent `greet`
+#  conversation_start: true
+##  condition:
+##    - slot_was_set:
+##        - user: false
+#  steps:
+#  - intent: greet
+#  - action: utter_ask_username
+#  wait_for_user_input: true
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot

@@ -1,0 +1,57 @@
+version: "3.1"
+
+intents:
+  - greet
+  - user_name
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+
+entities:
+  - user
+
+slots:
+  user:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: user
+      influence_conversation: true
+
+responses:
+  utter_ask_username:
+  - text: "Hey! Can you please provide your good name?"
+#  utter_greet:
+#  - text: "Hey! How are you?"
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/jnQxEDo.jpeg"
+  - text: "Here is a video to cheer you up:"
+    attachment: { "type":"video", "payload":{ "src": "https://youtube.com/embed/9C1Km6xfdMA" } }
+  - text: "Am sorry to hear that:"
+    image: "https://i.giphy.com/w89ak63KNl0nJl80ig.webp"
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+#  utter_end_chat:
+#  - text: "It was nice talking with you."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
+actions:
+  - action_greet
+  - action_end_chat
