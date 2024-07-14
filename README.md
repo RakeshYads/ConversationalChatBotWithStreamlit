@@ -59,7 +59,7 @@ This project demonstrates how to build a simple chatbot using Rasa, integrate it
 
     streamlit run streamlit_app/main.py
     ```
-###Deployment with Railway:**
+### Deployment with Railway:**
     
 1. **Sign in to Railway using CLI:**
 
@@ -87,25 +87,22 @@ This project demonstrates how to build a simple chatbot using Rasa, integrate it
     
 5.  **Access the deployed application:**
     Once deployed, Railway will provide a URL to access deployed Rasa chatbot integrated with Streamlit.
-###Usage
+### Usage
 
    - Open the Streamlit app URL provided by Railway.
    - Interact with the chatbot interface. Start by typing a message to initiate the conversation.
 
-###Customization
+### Customization
 
    - Rasa: Customize intents, entities, and responses in the data folder.
    - Streamlit: Modify the UI components, styling, and logic in the streamlit_app folder.
 
-###Acknowledgements
+### Acknowledgements
 
     This project uses Rasa for chatbot development.
     Streamlit is used for creating the user interface.
     Railway is used for deployment.
 
-###Contact
+### Contact
 
 For questions or support, please contact [Rakesh Yadav](https://www.linkedin.com/in/rakesh-yadav-556724118/).
-
-
-
