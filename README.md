@@ -4,7 +4,7 @@
 This project demonstrates how to build a simple chatbot using Rasa, integrate it with Streamlit for a user-friendly interface, and deploy it using Railway, a platform for deploying applications.
 
 ### Project Structure
-
+'''bash
 .
 ├── actions # Rasa custom actions (Python code)
 │ └── ...
@@ -26,8 +26,7 @@ This project demonstrates how to build a simple chatbot using Rasa, integrate it
 ├── requirements.txt # Python dependencies
 └── railway.yml # Railway configuration file
 
-markdown
-
+'''
 
 ### Prerequisites
 - Python 3.7+
