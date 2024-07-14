@@ -99,9 +99,9 @@ This project demonstrates how to build a simple chatbot using Rasa, integrate it
 
 ### Acknowledgements
 
-    This project uses Rasa for chatbot development.
-    Streamlit is used for creating the user interface.
-    Railway is used for deployment.
+  - This project uses Rasa for chatbot development.
+  - Streamlit is used for creating the user interface.
+  - Railway is used for deployment.
 
 ### Contact
 
