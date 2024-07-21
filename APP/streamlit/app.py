@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 import json
 def get_bot_response(user_input):
-    url = "http://localhost:5005/webhooks/rest/webhook"
+    url = "http://rasa-server:5005/webhooks/rest/webhook"
     payload = {"sender": "user", "message": user_input}
     response = requests.post(url, json=payload)
     response = json.dumps(response.json())
