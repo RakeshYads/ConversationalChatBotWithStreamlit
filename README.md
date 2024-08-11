@@ -1,8 +1,7 @@
 ## 🤖 Simple Rasa Chatbot integrated with Streamlit and deployed using Railway
 
 ### Overview
-This project demonstrates how to build a simple chatbot using Rasa, integrate it with Streamlit for a user-friendly interface, and deploy it using Railway, a platform for deploying applications.
-
+This project demonstrates how to build a simple chatbot using Rasa, integrate it with Streamlit for a user-friendly interface, and deploy it using Docker.
 ### Project Structure
 ```bash
 .
@@ -19,13 +18,11 @@ This project demonstrates how to build a simple chatbot using Rasa, integrate it
 ├── Dockerfile # Dockerfile for Rasa action server
 ├── README.md # README file (you're reading this)
 ├── requirements.txt # Python dependencies
-└── railway.yml # Railway configuration file
 
 ```
 
 ### Prerequisites
 - Python 3.7+
-- Railway account (for deployment)
 - Docker (for running Rasa action server locally)
 
 ### Setup Instructions
